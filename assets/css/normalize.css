@@ -1,2 +1,88 @@
+/** Variables personalizadas **/
+:root {
+    /* COLORES */
+    --base-color: #000;
+    --secondary-color: #333;
+    --alternative-color: #154360;
+
+    /* TIPOGRAFIAS */
+    --base-font: 'Segoe UI',
+        sans-serif;
+    --alternative-font: 'Arial',
+        sans-serif;
+
+    /* TAMAÑO DE FUENTES */
 
 
+    /* ESPACIOS */
+
+}
+
+/* MODO OSCURO */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base-color: #FFFFFF;
+        --secondary-color: #CCCCCC;
+        --alternative-color: #6495ED;
+    }
+}
+
+/* MODO DE ALTO CONTRASTE */
+@media (prefers-contrast-scheme: hight) {
+    :root {
+        --base-color: black;
+        --secondary-color: darkgrey;
+        --alternative-color: darkblue;
+    }
+}
+
+/* MODO SIN ANIMACIONES */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* RESETEO DE MARGENES, RELLENOS Y VISUALIZACIÓN ESTANDAR*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+*::before,
+*::after {
+    display: block;
+}
+
+/* GARANTIZAR QUE LOS ELEMENTOS MULTIMEDIA 
+SE AJUSTEN A SU CONTENEDOR Y SEAN RESPONSIVOS */
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* las dos propiedades siguientes son opcionales*/
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* RESTABLECER ESTILO DE LOS ENLACES PARA QUE SEAN CAJAS */
+a {
+    display: block;
+    text-decoration: none;
+    color:inherit;
+    font-size:inherit;
+  }
+  /* SALVO ENLACES DENTRO DE PARRAFOS */
+  p a {
+    display: inline;
+  }
