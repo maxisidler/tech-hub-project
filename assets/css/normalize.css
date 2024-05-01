@@ -4,18 +4,40 @@
     --base-color: #000;
     --secondary-color: #333;
     --alternative-color: #154360;
-
+    --counter-baseColor: #fff;
+    /*-----------------------------------------*/
     /* TIPOGRAFIAS */
     --base-font: 'Segoe UI',
         sans-serif;
     --alternative-font: 'Arial',
         sans-serif;
-
+    /*------------------------------------------*/
     /* TAMAÑO DE FUENTES */
-
-
+    --font-display: 2em;
+    /* Tamaño grande para encabezados */
+    --font-jumbo: 1.6em;
+    /* Tamaño grande para títulos destacados */
+    --font-xlarge: 1.3em;
+    /* Tamaño grande para subtítulos */
+    --font-large: 1.1em;
+    /* Tamaño grande para contenido principal */
+    --font-medium: 1em;
+    /* Tamaño medio para párrafos */
+    --font-small: 0.9em;
+    /* Tamaño pequeño para textos secundarios */
+    --font-xsmall: 0.8em;
+    /* Tamaño muy pequeño para texto de pie de página */
+    /*------------------------------------------*/
     /* ESPACIOS */
-
+    --spacing-24: 1.5em;
+    /* Margen o relleno grande */
+    --spacing-16: 1em;
+    /* Margen o relleno medio */
+    --spacing-12: 0.75em;
+    /* Margen o relleno pequeño */
+    --spacing-8: 0.5em;
+    /* Margen o relleno muy pequeño */
+    /*------------------------------------------*/
 }
 
 /* MODO OSCURO */
@@ -24,6 +46,7 @@
         --base-color: #FFFFFF;
         --secondary-color: #CCCCCC;
         --alternative-color: #6495ED;
+        --counter-baseColor: #000000;
     }
 }
 
@@ -33,13 +56,16 @@
         --base-color: black;
         --secondary-color: darkgrey;
         --alternative-color: darkblue;
+        --counter-baseColor: white;
     }
 }
 
 /* MODO SIN ANIMACIONES */
 @media (prefers-reduced-motion: reduce) {
     * {
+        -webkit-animation: none !important;
         animation: none !important;
+        -webkit-transition: none !important;
         transition: none !important;
     }
 }
@@ -51,6 +77,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     vertical-align: baseline;
 }
@@ -70,8 +97,12 @@ figure {
     max-width: 100%;
     width: 100%;
     display: block;
-    /* las dos propiedades siguientes son opcionales*/
+    /* OPCIONAL PARA ADAPTAR LA IMAGEN TANTO EN CENTRADO COMO EN TAMAÑO */
+    -webkit-object-fit: cover;
+    -o-object-fit: cover;
     object-fit: cover;
+    -webkit-object-position: center center;
+    -o-object-position: center center;
     object-position: center center;
 }
 
@@ -79,10 +110,127 @@ figure {
 a {
     display: block;
     text-decoration: none;
-    color:inherit;
-    font-size:inherit;
-  }
-  /* SALVO ENLACES DENTRO DE PARRAFOS */
-  p a {
+    color: inherit;
+    font-size: inherit;
+}
+
+/* SALVO ENLACES DENTRO DE PARRAFOS */
+p a {
     display: inline;
-  }
+}
+
+/* QUITAR LA VIÑETA (Punto) DE CADA ELEMENTO DE UNA LISTA ORDENADA */
+li {
+    list-style-type: none;
+}
+
+/* DESPLAZAMIENTO ENTRE SECCIONES O ANCLAS DE MANERA SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* QUITAR COMILLAS Y CONTENIDO ADICIONAL A LAS CITAS Y NOTAS CORTAS*/
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+/* CONTRASTE AL SELECCIONAR TEXTO EN FIREFOX  */
+::-moz-selection {
+    background-color: var(--base-color);
+    color: var(--counter-baseColor);
+}
+
+/* CONTRASTE AL SELECCIONAR TEXTO */
+::selection {
+    background-color: var(--base-color);
+    color: var(--counter-baseColor);
+}
+
+/* ESTILIZAR UNIFORMEMENTE LOS ELEMENTOS DEL FORMULARIO 
+PROPORCIONANDO UNA APARIENCIA COHERENTE  */
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    /*DIVISIÓN DE PALABRAS EN LOS ELEMENTOS DE TEXTO*/
+    hyphens: auto;
+    /*----------------------------------------------*/
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* ELIMINAN EL ASPECTO PREDETERMINADO DEL SISTEMA OPERATIVO */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* RESETEO DE TABLAS */
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* SETEO DE LOS ELEMENTOS SVG */
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* SETEO DE LOS SVG EN PÁRRAFOS PARA QUE SE ADECUE AL TEXTO */
+p svg {
+    display: inline;
+    width: initial;
+}
+
+/* SETEO GENÉRICO PARA TODA LA WEB */
+body {
+    /* BODY CON AL MENOS EL MISMO TAMAÑO QUE LA PANTALLA*/
+    min-height: 100vh;
+    /* -------------------------------------------------*/
+    /* LO AJUSTAMOS A LA CONFIGURACIÓN DEL USUARIO */
+    font-size: 100%;
+    /* --------------------------------------------*/
+    font-family: var(--base-font);
+    color: var(--base-color);
+    line-height: var(--spacing-24);
+    /*DIVISIÓN DE PALABRAS EN LOS ELEMENTOS DE TEXTO*/
+    hyphens: auto;
+    /* --------------------------------------------*/
+    /*SUAVIZADO DE FUENTES*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
