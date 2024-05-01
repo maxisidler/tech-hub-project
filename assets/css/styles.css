@@ -19,6 +19,7 @@ h3 {
 
 p {
     font-size: var(--font-medium); 
+}
 
 small {
     font-size: var(--font-small); 
