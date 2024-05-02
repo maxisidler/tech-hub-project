@@ -4,43 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <title>Tech Hub Project | Site</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
 
-<body>
-    <form onsubmit="return validarContacto()" method="" enctype="multipart/form-data" action="./contact.html">
+<body class="body-container">
 
-        <label for="name">Ingrese su nombre:</label>
-        <input type="text" name="name" id="name" placeholder="Nombre">
+    <header class="header-container">
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="list__item"><a class="item__link" href="../../index.html">Inicio</a></li>
+                <li class="list__item"><a class="item__link" href="./shop.html">Shop</a></li>
+                <li class="list__item"><a class="item__link" href="./about.html">Sobre nosotros</a></li>
+                <li class="list__item"><a class="item__link" href="./contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="issue_type">Seleccione el tipo de problema:</label>
-        <select name="issue_type" id="issue_type">
-            <option value="">Seleccione una opción</option>
-            <option value="bug">Error</option>
-            <option value="flaw">Defecto</option>
-            <option value="inconsistency">Inconsistencia</option>
-        </select>
+    <main class="main-container">
 
-        <label for="details">Describa el inconveniente o problema que tiene. (Obligatorio)</label>
-        <input type="text" name="details" id="details" placeholder="Descripción">
+        <form onsubmit="return validarContacto()" method="" enctype="multipart/form-data" action="./contact.html">
 
-        <label for="image">Puede adjuntar una imagen del problema para ayudarnos
-            a determinar lo que sucedió.</label>
-        <input type="file" name="image" id="image" accept="image/*">
+            <label for="name">Ingrese su nombre:</label>
+            <input type="text" name="name" id="name" placeholder="Nombre">
 
-        <label for="email">Ingrese un email donde podamos contactarnos: (Obligatorio)</label>
-        <input type="email" name="email" id="email" placeholder="@email">
+            <label for="issue_type">Seleccione el tipo de problema:</label>
+            <select name="issue_type" id="issue_type">
+                <option value="">Seleccione una opción</option>
+                <option value="bug">Error</option>
+                <option value="flaw">Defecto</option>
+                <option value="inconsistency">Inconsistencia</option>
+            </select>
 
-        <label for="legal">Declaración de responsabilidad. (Obligatorio)
-            <input type="checkbox" name="legal" id="legal">
-            Afirmo no haber manipulado el software mediante terceros
-        </label>
+            <label for="details">Describa el inconveniente o problema que tiene. (Obligatorio)</label>
+            <input type="text" name="details" id="details" placeholder="Descripción">
 
-        <button type="submit">Enviar</button>
-    </form>
+            <label for="image">Puede adjuntar una imagen del problema para ayudarnos
+                a determinar lo que sucedió.</label>
+            <input type="file" name="image" id="image" accept="image/*">
 
-    <script src="../../assets/js/validations.js"></script>
+            <label for="email">Ingrese un email donde podamos contactarnos: (Obligatorio)</label>
+            <input type="email" name="email" id="email" placeholder="@email">
+
+            <label for="legal">Declaración de responsabilidad. (Obligatorio)
+                <input type="checkbox" name="legal" id="legal">
+                Afirmo no haber manipulado el software mediante terceros
+            </label>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <script src="../../assets/js/validations.js"></script>
+
+    </main>
+
+    <footer class="footer-container">
+        <p class="footer__legal">&copy; 2024 Tech Hub Developers</p>
+    </footer>
+
 </body>
 
 </html>

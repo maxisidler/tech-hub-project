@@ -1,0 +1,40 @@
+:root {
+    /* COLORES */
+    --base-color: #000;
+    --counter-baseColor: #fff;
+    --secondary-color: #343a40;
+    --alternative-color: #154360;
+    /*-----------------------------------------*/
+    /* TIPOGRAFIAS */
+    --base-font: 'Segoe UI',
+        sans-serif;
+    --alternative-font: 'Arial',
+        sans-serif;
+    /*------------------------------------------*/
+    /* TAMAÑO DE FUENTES */
+    --font-display: 2.5em;
+    /* Tamaño grande para encabezados */
+    --font-jumbo: 1.6em;
+    /* Tamaño grande para títulos destacados */
+    --font-xlarge: 1.3em;
+    /* Tamaño grande para subtítulos */
+    --font-large: 1.1em;
+    /* Tamaño grande para contenido principal */
+    --font-medium: 1em;
+    /* Tamaño medio para párrafos */
+    --font-small: 0.9em;
+    /* Tamaño pequeño para textos secundarios */
+    --font-xsmall: 0.8em;
+    /* Tamaño muy pequeño para texto de pie de página */
+    /*------------------------------------------*/
+    /* ESPACIOS */
+    --spacing-24: 1.5em;
+    /* Margen o relleno grande */
+    --spacing-16: 1em;
+    /* Margen o relleno medio */
+    --spacing-12: 0.75em;
+    /* Margen o relleno pequeño */
+    --spacing-8: 0.5em;
+    /* Margen o relleno muy pequeño */
+    /*------------------------------------------*/
+}
