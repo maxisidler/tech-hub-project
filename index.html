@@ -1,81 +1,66 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Tech Hub Project | Site</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
-<body>
+<body class="body-container">
 
-    <h1>TITULO</h1>
-    <main>COSAS DEL MAIN</main>
-    <input type="text">
-    <p><a href=""></a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis maiores, vel
-        dolore tenetur cumque ea, sit sequi odit aliquam ullam molestias soluta aspernatur a voluptates labore
-        exercitationem, hic recusandae autem.</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <select>
-		<option>Texto</option>
-	</select>
-    <input type="text">
-    <button type="submit">CARGAAAA BOTON</button>
-    <button>BOTOOON</button>
-    <div class="table-responsive">
-        <table class="table table-primary">
-            <thead>
-                <tr>
-                    <th scope="col">Column 1</th>
-                    <th scope="col">Column 2</th>
-                    <th scope="col">Column 3</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="">
-                    <td scope="row">R1C1</td>
-                    <td>R1C2</td>
-                    <td>R1C3</td>
-                </tr>
-                <tr class="">
-                    <td scope="row">Item</td>
-                    <td>Item</td>
-                    <td>Item</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
------------------
-    <blockquote>
-        <p>This is a quoted text from another source.</p>
-        <footer>Source: <cite>Author or Title</cite></footer>
-    </blockquote>
+    <header class="header-container">
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="list__item"><a class="item__link" href="./index.html">Inicio</a></li>
+                <li class="list__item"><a class="item__link" href="./pages/shop/shop.html">Shop</a></li>
+                <li class="list__item"><a class="item__link" href="./pages/shop/about.html">Sobre nosotros</a></li>
+                <li class="list__item"><a class="item__link" href="./pages/shop/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    ------------------------------
-    <p>This is a paragraph with a <q>short quotation</q> embedded.</p>
+    <main class="main-container">
 
+        <section class="hero">
+            <img class="hero__image" src="./assets/img/continents-873103_1280.jpg" alt="hero_banner">
+            <h1 class="hero__title">TECH HUB PROJECT</h1>
+            <p class="hero__message">La tecnología avanza... y junto a nosotros vos también ;D</p>
+            <a class="hero__link" href="#">Ver nuestro catálogo</a>
+        </section>
 
-    <ul>x</ul>
-    <ul>y</ul>
-    <ul>z</ul>
+        <section class="newsProducts">
+            <h2 class="newsProducts__title">Novedades</h2>
 
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
+            <div class="newsProducts__card">
+                <img class="card__image" src="software_A.jpg" alt="software_A">
+                <h3 class="card__name">NOMBRE DEL SOFTWARE A</h3>
+                <p class="card__text">Descripción del software A</p>
+                <a class="card__link" href="#">Link para ver mas info</a>
+            </div>
 
+            <div class="newsProducts__card">
+                <img class="card__image" src="software_B.jpg" alt="software_B">
+                <h3 class="card__name">NOMBRE DEL SOFTWARE B</h3>
+                <p class="card__text">Descripción del software B</p>
+                <a class="card__link" href="#">Link para ver mas info</a>
+            </div>
 
-    <img src="./assets/img/julian-o-hayon-Bs-zngH79Ds-unsplash.jpg" alt="Imagen">
-    <img src="./assets/img/markus-spiske-iar-afB0QQw-unsplash.jpg" alt="">
-    <img src="./assets/img/oliver-pecker-HONJP8DyiSM-unsplash.jpg" alt="">
+            <div class="newsProducts__card">
+                <img class="card__image" src="software_C.jpg" alt="software_C">
+                <h3 class="card__name">NOMBRE DEL SOFTWARE C</h3>
+                <p class="card__text">Descripción del software C</p>
+                <a class="card__link" href="#">Link para ver mas info</a>
+            </div>
 
-    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
 
+    </main>
+
+    <footer class="footer-container">
+        <p class="footer__legal">&copy; 2024 Tech Hub Developers</p>
+    </footer>
 
 </body>
 

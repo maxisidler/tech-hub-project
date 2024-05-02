@@ -1,0 +1,23 @@
+@import url('./variables.css');
+@import url('./normalize.css');
+@import url('./partials.css');
+@import url('./home.css');
+
+
+/* DIFERENCIAR CITAS CORTAS DEL TEXTO PLANO */
+q {
+    font-style: italic;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-top: var(--spacing-24); 
+    padding-bottom: var(--spacing-24); 
+}
+
+
