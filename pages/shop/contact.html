@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+
+<body>
+    <form onsubmit="return validarContacto()" method="" enctype="multipart/form-data" action="./contact.html">
+
+        <label for="name">Ingrese su nombre:</label>
+        <input type="text" name="name" id="name" placeholder="Nombre">
+
+        <label for="issue_type">Seleccione el tipo de problema:</label>
+        <select name="issue_type" id="issue_type">
+            <option value="">Seleccione una opción</option>
+            <option value="bug">Error</option>
+            <option value="flaw">Defecto</option>
+            <option value="inconsistency">Inconsistencia</option>
+        </select>
+
+        <label for="details">Describa el inconveniente o problema que tiene. (Obligatorio)</label>
+        <input type="text" name="details" id="details" placeholder="Descripción">
+
+        <label for="image">Puede adjuntar una imagen del problema para ayudarnos
+            a determinar lo que sucedió.</label>
+        <input type="file" name="image" id="image" accept="image/*">
+
+        <label for="email">Ingrese un email donde podamos contactarnos: (Obligatorio)</label>
+        <input type="email" name="email" id="email" placeholder="@email">
+
+        <label for="legal">Declaración de responsabilidad. (Obligatorio)
+            <input type="checkbox" name="legal" id="legal">
+            Afirmo no haber manipulado el software mediante terceros
+        </label>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="../../assets/js/validations.js"></script>
+</body>
+
+</html>
