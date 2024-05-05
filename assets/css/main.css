@@ -1,23 +1,108 @@
 @import url('./variables.css');
 @import url('./normalize.css');
-@import url('./partials.css');
-@import url('./home.css');
 
+/* DISEÑO RESPONSIVO DEL CONTENIDO */
 
-/* DIFERENCIAR CITAS CORTAS DEL TEXTO PLANO */
-q {
-    font-style: italic;
-}
+body{
+    min-height: 100vh;
+} 
 
-.main-container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-section {
-    margin-bottom: 30px;
-    padding-top: var(--spacing-24); 
-    padding-bottom: var(--spacing-24); 
+header{
+    background-color: var(--secondary-color);
+    color: var(--counter-baseColor);
 }
 
+.nav, .nav__menu, .hero, .products ,.foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap:5%;
+}
+
+.nav__logo{
+    max-width: 8%;
+    height: auto;
+}
+
+.nav{
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__menu{
+    gap: 1rem;
+}
+
+.hero{
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.529);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.banner{
+    background-image: url('../../assets/img/marvin-meyer-SYTO3xs06fU-unsplash.jpg');
+    background-size:cover; 
+    background-position:center center; 
+    background-attachment: fixed;
+} 
+
+.products{
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.154);
+}
+
+.products__title{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+}
+
+.products__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.product__card--big{
+grid-row-end: span 2 ;
+height: 80%;
+}
+
+.product__card--medium, .product__card--small{
+    height: 90%;
+    }
+
+.product__card--big, .product__card--medium, .product__card--small  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 1rem;
+    gap:1rem;
+    margin: 1rem;
+    background-color: rgba(173, 63, 145, 0.094);
+    
+}
+
+.products__box .product__image {
+    grid-row-end: span 3;
+    width: auto;
+    height: auto;
+}
+
+footer{
+    background-color: var(--secondary-color);
+    color: var(--counter-baseColor);
+} 
+
+.foot{
+    justify-content: center;
+}
 
