@@ -3,63 +3,77 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Hub Project | Site</title>
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
-<body class="body-container">
+<body>
 
-    <header class="header-container">
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li class="list__item"><a class="item__link" href="./index.html">Inicio</a></li>
-                <li class="list__item"><a class="item__link" href="./pages/shop/shop.html">Shop</a></li>
-                <li class="list__item"><a class="item__link" href="./pages/shop/about.html">Sobre nosotros</a></li>
-                <li class="list__item"><a class="item__link" href="./pages/shop/contact.html">Contacto</a></li>
+    <header>
+        <nav class="nav container">
+            <img class="nav__logo" src="./assets/img/desarrollo-web.png" alt="customer-logo">
+            <ul class="nav__menu ">
+                <li class="nav__item"><a class="nav__link" href="./index.html">Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="./pages/shop/shop.html">Shop</a></li>
+                <li class="nav__item"><a class="nav__link" href="./pages/shop/about.html">Sobre nosotros</a></li>
+                <li class="nav__item"><a class="nav__link" href="./pages/shop/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="main-container">
+    <main>
 
-        <section class="hero">
-            <img class="hero__image" src="./assets/img/continents-873103_1280.jpg" alt="hero_banner">
-            <h1 class="hero__title">TECH HUB PROJECT</h1>
-            <p class="hero__message">La tecnología avanza... y junto a nosotros vos también ;D</p>
-            <a class="hero__link" href="#">Ver nuestro catálogo</a>
+        <section class="banner">
+            <article class="hero container ">
+                <h1 class="hero__title">TECH HUB PROJECT</h1>
+                <p class="hero__message">La tecnología avanza... y junto a nosotros vos también ;D</p>
+                <a class="hero__link" href="#">Ver nuestro catálogo</a>
+            </article>
         </section>
 
-        <section class="newsProducts">
-            <h2 class="newsProducts__title">Novedades</h2>
+        <section class="news">
+            <div class="products container">
 
-            <div class="newsProducts__card">
-                <img class="card__image" src="software_A.jpg" alt="software_A">
-                <h3 class="card__name">NOMBRE DEL SOFTWARE A</h3>
-                <p class="card__text">Descripción del software A</p>
-                <a class="card__link" href="#">Link para ver mas info</a>
+                <h2 class="products__title">Novedades</h2>
+
+                <div class="products__box">
+                    <article class="product__card--big">
+                        <img class="product__image" src="./assets/img/alex-knight-2EJCSULRwC8-unsplash.jpg"
+                            alt="software_A">
+                        <h3 class="product__name">NOMBRE DEL SOFTWARE A</h3>
+                        <p class="product__text">Descripción del software A</p>
+                        <a class="product__link" href="#">Link para ver mas info</a>
+                    </article>
+
+                    <article class="product__card--medium">
+                        <img class="product__image" src="./assets/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
+                            alt="software_B">
+                        <h3 class="product__name">NOMBRE DEL SOFTWARE B</h3>
+                        <p class="product__text">Descripción del software B</p>
+                        <a class="product__link" href="#">Link para ver mas info</a>
+                    </article>
+
+                    <article class="product__card--small">
+                        <img class="product__image" src="./assets/img/ash-edmonds-Koxa-GX_5zs-unsplash.jpg"
+                            alt="software_C">
+                        <h3 class="product__name">NOMBRE DEL SOFTWARE C</h3>
+                        <p class="product__text">Descripción del software C</p>
+                        <a class="product__link" href="#">Link para ver mas info</a>
+                    </article>
+ 
+                </div>
             </div>
-
-            <div class="newsProducts__card">
-                <img class="card__image" src="software_B.jpg" alt="software_B">
-                <h3 class="card__name">NOMBRE DEL SOFTWARE B</h3>
-                <p class="card__text">Descripción del software B</p>
-                <a class="card__link" href="#">Link para ver mas info</a>
-            </div>
-
-            <div class="newsProducts__card">
-                <img class="card__image" src="software_C.jpg" alt="software_C">
-                <h3 class="card__name">NOMBRE DEL SOFTWARE C</h3>
-                <p class="card__text">Descripción del software C</p>
-                <a class="card__link" href="#">Link para ver mas info</a>
-            </div>
-
         </section>
 
     </main>
 
-    <footer class="footer-container">
-        <p class="footer__legal">&copy; 2024 Tech Hub Developers</p>
+    <footer>
+        <div class="foot container">
+            <p class="footer-logo">M&S Developers</p>
+            <p class="footer-copyright">&copy; 2024 Tech Hub Developers</p>
+        </div>
     </footer>
 
 </body>

@@ -105,6 +105,7 @@ em {
     font-style: normal;
     text-decoration: none;
     color: inherit;
+    overflow-wrap: break-word;
 }
 
 /* QUITAR COMILLAS Y CONTENIDO ADICIONAL A LAS CITAS Y NOTAS CORTAS*/
@@ -114,6 +115,11 @@ q:before,
 q:after {
     content: "";
     content: none;
+}
+
+/* DIFERENCIAR CITAS CORTAS DEL TEXTO PLANO */
+q {
+    font-style: italic;
 }
 
 /* CONTRASTE AL SELECCIONAR TEXTO EN FIREFOX  */
@@ -173,7 +179,7 @@ p svg {
 
 /* SETEO GENÉRICO PARA TODA LA WEB */
 body {
-    /* BODY CON AL MENOS EL MISMO TAMAÑO QUE LA PANTALLA*/
+    /* BODY CON AL MENOS EL MISMO TAMAÑO QUE LA PANTALLA
     min-height: 100vh;
     /* -------------------------------------------------*/
     /* LO AJUSTAMOS A LA CONFIGURACIÓN DEL USUARIO */
@@ -183,9 +189,16 @@ body {
     color: var(--base-color);
     line-height: var(--spacing-24);
     /*DIVISIÓN DE PALABRAS EN LOS ELEMENTOS DE TEXTO*/
-    hyphens: auto;
+    /* hyphens: auto; */
     /* --------------------------------------------*/
     /*SUAVIZADO DE FUENTES*/
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale; 
 }
+
+/* Elementos de alta prioridad (modales, menús desplegables, información sobre herramientas) 
+siempre aparecerán encima de los demás elementos en nuestra aplicación.
+#root,
+#__next {
+    isolation: isolate;
+}*/
