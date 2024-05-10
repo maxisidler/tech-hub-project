@@ -6,68 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Hub Project | Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
-    <header>
-        <nav class="nav container">
-            <div class="nav__logo">
-                <img class="nav__image" src="../../assets/img/desarrollo-web.png" alt="customer-logo">
-                <p class="nav__text">M&S Developers</p>
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">TECH HUB PROJECT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./shop.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contacto</a></li>
+                </ul>
             </div>
-            <ul class="nav__menu ">
-                <li class="nav__item"><a class="nav__link" href="../../index.html">Inicio</a></li>
-                <li class="nav__item"><a class="nav__link" href="./shop.html">Shop</a></li>
-                <li class="nav__item"><a class="nav__link" href="./about.html">Sobre nosotros</a></li>
-                <li class="nav__item"><a class="nav__link" href="./contact.html">Contacto</a></li>
-            </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
+
+    </section>
     <main>
-        <form onsubmit="return validarContacto()" method="" enctype="multipart/form-data" action="./contact.html">
+        <form onsubmit="return validarContacto()" method="" class="container mt-5" enctype="multipart/form-data"
+            action="./contact.html">
 
-            <label for="name">Ingrese su nombre:</label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
+            <h2>Contacto</h2>
+            <p>Envíanos un mensaje a través de nuestro formulario.</p>
+            <div class="form-group">
+                <label for="name">Ingrese su nombre:</label>
+                <input type="text" class="form-control" id="name" placeholder="John Wick">
+            </div>
+            <div class="form-group">
+                <label for="issue_type">Seleccione el tipo de problema:</label>
+                <select name="issue_type" id="issue_type" class="custom-select">
+                    <option value="">Seleccione una opción</option>
+                    <option value="bug">Error</option>
+                    <option value="flaw">Defecto</option>
+                    <option value="inconsistency">Inconsistencia</option>
+                </select>
+            </div>
 
-            <label for="issue_type">Seleccione el tipo de problema:</label>
-            <select name="issue_type" id="issue_type">
-                <option value="">Seleccione una opción</option>
-                <option value="bug">Error</option>
-                <option value="flaw">Defecto</option>
-                <option value="inconsistency">Inconsistencia</option>
-            </select>
+            <div class="form-group">
+                <label for="details">Describa el inconveniente o problema que tiene. (Obligatorio)</label>
+                <textarea class="form-control" id="details" placeholder="Ocurrió un error..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Puede adjuntar una imagen del problema para ayudarnos
+                    a determinar lo que sucedió.</label>
+                <input type="file" name="image" id="image" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="email">Ingrese un email donde podamos contactarnos: (Obligatorio)</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="legal">Declaración de responsabilidad. (Obligatorio)</label>
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="legal" name="legal" class="form-check-input">
+                    <label for="legal">Afirmo no haber manipulado el software mediante terceros</label>
+                </div>
+            </div>
 
-            <label for="details">Describa el inconveniente o problema que tiene. (Obligatorio)</label>
-            <input type="text" name="details" id="details" placeholder="Descripción">
-
-            <label for="image">Puede adjuntar una imagen del problema para ayudarnos
-                a determinar lo que sucedió.</label>
-            <input type="file" name="image" id="image" accept="image/*">
-
-            <label for="email">Ingrese un email donde podamos contactarnos: (Obligatorio)</label>
-            <input type="email" name="email" id="email" placeholder="@email">
-
-            <label for="legal">Declaración de responsabilidad. (Obligatorio)
-                <input type="checkbox" name="legal" id="legal">
-                Afirmo no haber manipulado el software mediante terceros
-            </label>
-
-            <button type="submit">Enviar</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
         </form>
 
         <script src="../../assets/js/validations.js"></script>
     </main>
 
-    <footer>
-        <div class="foot container">
-            <p class="footer-logo">M&S Developers</p>
-            <p class="footer-copyright">&copy; 2024 Tech Hub Developers</p>
-        </div>
-    </footer>
+<footer class="container-fluid text-center mt-5">
+    <p>&copy; 2024 Tech Hub Developers. Todos los derechos reservados.</p>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+</footer>
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

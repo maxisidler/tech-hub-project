@@ -6,88 +6,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Hub Project | Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <header>
-        <nav class="nav container">
-            <div class="nav__logo">
-                <img class="nav__image" src="./assets/img/desarrollo-web.png" alt="customer-logo">
-                <p class="nav__text">M&S Developers</p>
-            </div>
-            <ul class="nav__menu ">
-                <li class="nav__item"><a class="nav__link" href="./index.html">Inicio</a></li>
-                <li class="nav__item"><a class="nav__link" href="./pages/shop/shop.html">Shop</a></li>
-                <li class="nav__item"><a class="nav__link" href="./pages/shop/about.html">Sobre nosotros</a></li>
-                <li class="nav__item"><a class="nav__link" href="./pages/shop/contact.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">TECH HUB PROJECT</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/shop/shop.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/shop/about.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/shop/contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
-
-    <main>
 
         <section class="banner">
             <article class="hero container ">
-                <h1 class="hero__title">TECH HUB PROJECT</h1>
                 <p class="hero__message">La tecnología avanza... y junto a nosotros vos también ;D</p>
-                <a class="hero__link" href="#">Ver nuestro catálogo</a>
+
             </article>
         </section>
+    <main>
 
-        <section class="news">
-            <div class="products container">
 
-                <h2 class="products__title">Novedades</h2>
 
-                <div class="products__box">
-                    <article class="product__card--big">
-                        <img class="product__image" src="./assets/img/alex-knight-2EJCSULRwC8-unsplash.jpg"
-                            alt="software_A">
-                        <h3 class="product__name">SOFTWARE A</h3>
-                        <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                            impedit,
-                            pariatur deserunt voluptates numquam architecto earum odit sit? Adipisci quae itaque
-                            aspernatur harum,
-                            praesentium sapiente exercitationem architecto quidem nihil magnam?</p>
-                        <a class="product__link" href="#">+ info</a>
-                    </article>
+                <a class="after__link" href="#">Ver nuestro catálogo</a>
 
-                    <article class="product__card--medium">
-                        <img class="product__image" src="./assets/img/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg"
-                            alt="software_B">
-                        <h3 class="product__name">SOFTWARE B</h3>
-                        <p class="product__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Iusto explicabo dolore libero ipsum? Quod animi numquam laudantium voluptatem hic molestiae,
-                            qui iure eligendi, facilis deserunt nobis quia rem at velit.</p>
-                        <a class="product__link" href="#">+ info</a>
-                    </article>
-
-                    <article class="product__card--small">
-                        <img class="product__image" src="./assets/img/ash-edmonds-Koxa-GX_5zs-unsplash.jpg"
-                            alt="software_C">
-                        <h3 class="product__name">SOFTWARE C</h3>
-                        <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Eum consectetur dignissimos temporibus vitae asperiores inventore tenetur culpa ipsam iure,
-                            eius praesentium accusantium exercitationem nesciunt corporis consequuntur labore est ab!
-                            Doloremque!</p>
-                        <a class="product__link" href="#">+ info</a>
-                    </article>
-
+                <br><br>
+        <section id="inicio" class="padup container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./assets/img/alex-knight-2EJCSULRwC8-unsplash.jpg" alt="Tecnología 1" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="./assets/img/ash-edmonds-Koxa-GX_5zs-unsplash.jpg" alt="Tecnología 2" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="./assets/img/markus-spiske-iar-afB0QQw-unsplash.jpg" alt="Tecnología 3" class="img-fluid">
                 </div>
             </div>
         </section>
 
+        <section id="novedades" class="container mt-5">
+            <h2>Últimas Novedades</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody class="colorido">
+                    <tr class="product">
+                        <td><img src="./assets/img/desarrollador-de-software.png" alt=""></td>
+                        <td>Descripción del producto A.</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr class="product">
+                        <td><img src="./assets/img/desarrollo-movil.png" alt=""></td>
+                        <td>Descripción del producto B.</td>
+                        <td>$200</td>
+                    </tr>
+                    <tr class="product">
+                        <td><img src="./assets/img/desarrollo-web.png" alt=""></td>
+                        <td>Descripción del producto C.</td>
+                        <td>$300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
     </main>
 
-    <footer>
-        <div class="foot container">
-            <p class="footer-logo">M&S Developers</p>
-            <p class="footer-copyright">&copy; 2024 Tech Hub Developers</p>
-        </div>
+    <footer class="container-fluid text-center mt-5">
+        <p>&copy; 2024 Tech Hub Developers. Todos los derechos reservados.</p>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
