@@ -2,10 +2,6 @@
 
 ¡Gracias por tu interés en contribuir a nuestro proyecto! A continuación, encontrarás las directrices que deberías seguir para colaborar eficazmente.
 
-## Código de Conducta
-
-Este proyecto y todos los participantes están regidos por un Código de Conducta que puedes encontrar en el archivo `CODE_OF_CONDUCT.md`. Al participar, se espera que cumplas este código. Por favor, léelo antes de contribuir.
-
 ## ¿Cómo Contribuir?
 
 ### Reportar Bugs
