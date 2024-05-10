@@ -1,5 +1,6 @@
 @import url('./variables.css');
 @import url('./normalize.css');
+@import url('./shop.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body,
@@ -7,6 +8,8 @@ html {
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .container h1 {
