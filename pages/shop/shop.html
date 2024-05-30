@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Hub Project | Site</title>
+    <title>Tech Hub Project | Catálogo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -15,36 +15,124 @@
 
 <body>
 
-<header>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="../../index.html">TECH HUB PROJECT</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="shop.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="../../index.html">TECH HUB PROJECT</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="shop.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+            <aside class="col-md-3 aside-filtros">
+                <h5>Filtros</h5>
+                <div>Filtrar por categoría:</div>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="gaming"> Gaming
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="oficina"> Oficina
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="educacion"> Educación
+                        </label>
+                    </li>
                 </ul>
+            </aside>
+            <div class="col-md-9">
+                <h2 class="titulo-productos">--- Catálogo de Productos ---</h2>
+                <div class="products-container">
+                    <div class="product-large">
+                        <div id="producto1" class="card product-card">
+                            <img src="../../assets/img/MOUSE2LOGITECH.webp" class="card-img-top" alt="Producto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 1</h5>
+                                <p class="card-text">Descripción breve del producto 1.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="producto2" class="card product-card">
+                            <img src="../../assets/img/MOUSE LOGITECH.jpg" class="card-img-top" alt="Producto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 2</h5>
+                                <p class="card-text">Descripción breve del producto 2.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="producto3" class="card product-card">
+                            <img src="../../assets/img/TECLADO RGB.jpg" class="card-img-top" alt="Producto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 3</h5>
+                                <p class="card-text">Descripción breve del producto 3.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-large">
+                        <div class="card product-card">
+                            <img src="../../assets/img/prod1.jpg" class="card-img-top" alt="Producto 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 4</h5>
+                                <p class="card-text">Descripción breve del producto 4.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card product-card">
+                            <img src="../../assets/img/prod2.png" class="card-img-top" alt="Producto 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 5</h5>
+                                <p class="card-text">Descripción breve del producto 5.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card product-card">
+                            <img src="../../assets/img/prod3.png" class="card-img-top" alt="Producto 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Producto 6</h5>
+                                <p class="card-text">Descripción breve del producto 6.</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </div>
-</header>
-
-
-    <main>
-        <p>PROXIMAMENTE...</p>
+        </div>
     </main>
 
-<footer class="container-fluid text-center mt-5">
-    <p>&copy; 2024 Tech Hub Developers. Todos los derechos reservados.</p>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-</footer>
-
+    <footer class="container-fluid text-center mt-5">
+        <p>&copy; 2024 Tech Hub Developers. Todos los derechos reservados.</p>
+        <div class="enlaces-contenedor">
+            <a href="https://www.facebook.com/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+            <a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
