@@ -29,7 +29,7 @@ header {
 }
 
 .banner {
-    background-image: url('/assets/img/coleccion-dispositivos-electronicos-ai-generativo-fondo-negro_893571-1989.avif');
+    background-image: url('/assets/img/BANNERNUEVO.jpg');
     background-size: cover;
     background-position: 50% 50%;
     height: 100vh;
@@ -43,14 +43,14 @@ header {
 
 .btn-tienda {
     background-color: rgb(248, 26, 92) !important;
-    width: 35%;
+    width: 20%;
     border: none;
     color: white;
     font-weight: 500 !important;
 }
 
 .texto-slider {
-    color: #d12525;
+    color: #fff;
     font-weight: 700;
 }
 
@@ -315,6 +315,9 @@ input[type="checkbox"] {
 .text-btn:hover{
     color: #000;
     text-decoration: none;
+}
+.modal-color{
+    color: #000;
 }
 @media (max-width: 768px) {
     .products-container {
