@@ -31,10 +31,11 @@ header h1 {
 
 
 
-.container-banner{
+.container-banner {
     margin: 50px;
     width: 100px;
 }
+
 .banner {
     background-image: url('/assets/img/coleccion-dispositivos-electronicos-ai-generativo-fondo-negro_893571-1989.avif');
     background-size: cover;
@@ -43,35 +44,39 @@ header h1 {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
     color: white;
 }
 
-.btn-tienda{
+.btn-tienda {
     background-color: rgb(248, 26, 92) !important;
     width: 35%;
     border: none;
-    color: white ;
+    color: white;
     font-weight: 500 !important;
 }
-.texto-slider{
-    color:#ccc;
+
+.texto-slider {
+    color: #ccc;
     font-weight: 700;
 }
 
-.slider-container{
+.slider-container {
     height: 500px;
 }
-.img-slider{
+
+.img-slider {
     height: 500px;
 }
+
 .card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; /* Asegura que el texto también esté centrado */
+    text-align: center;
+    /* Asegura que el texto también esté centrado */
 }
 
 footer {
@@ -92,7 +97,7 @@ footer {
     padding: 4rem;
     font-family: var(--secondary-font);
     font-size: 2rem;
-    
+
     text-decoration: none;
     box-shadow: 0 3px #ff0000;
     text-decoration: none;
@@ -100,7 +105,7 @@ footer {
     background-image: linear-gradient(to bottom, transparent 60%, #000 60%, #000 68%, transparent 68%);
 }
 
-.after__link:hover{
+.after__link:hover {
     color: #d73a3a;
 }
 
@@ -194,7 +199,7 @@ h2 {
     font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
-    
+
 }
 
 p {
@@ -205,6 +210,20 @@ p {
     text-align: center;
 }
 
+.about-us {
+    display: flex;
+    padding: 30px;
+    padding-top: 65px;
+}
+
+.div-frase {
+    padding-top: 20px;
+}
+
+.frase {
+    border-width: 3px !important;
+    border-color: #504b4b2e !important;
+}
 
 .form-group {
     margin-bottom: 15px;
@@ -225,7 +244,8 @@ p {
     .nav {
         flex-direction: column;
     }
-    .sidebar{
+
+    .sidebar {
         background-color: #000;
     }
 }
