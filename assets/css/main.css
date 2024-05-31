@@ -45,7 +45,14 @@ header {
         padding-top: 5rem !important;
     }
 } */
-
+.navbar-transition {
+    transition: all 0.2s ease-out !important;
+  }
+  
+  .navbar-transition:hover {
+    /* Cambia alguna propiedad para ver el efecto, como el color de fondo */
+    background-color: #f8f9fa !important;
+  }
 .btn-tienda {
     background-color: rgb(248, 26, 92) !important;
     width: 35%;
