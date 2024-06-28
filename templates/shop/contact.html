@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tech Hub Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="{{ url_for('home') }}">TECH HUB PROJECT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('shop') }}">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="contact-section mt-5">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Envíanos un mensaje a través de nuestro formulario.</p>
+            <form id="contactForm" onsubmit="return validarContacto()" class="custom-form" enctype="multipart/form-data" action="{{ url_for('contact') }}">
+                <div class="form-group">
+                    <label for="name">Ingrese su nombre:</label>
+                    <input type="text" class="form-control" id="name" placeholder="John Wick" required>
+                </div>
+                <div class="form-group">
+                    <label for="issue_type">Seleccione el tipo de problema:</label>
+                    <select name="issue_type" id="issue_type" class="custom-select" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="bug">Error</option>
+                        <option value="flaw">Defecto</option>
+                        <option value="inconsistency">Inconsistencia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">Describa el inconveniente o problema que tiene. (Obligatorio)</label>
+                    <textarea class="form-control" id="details" placeholder="Ocurrió un error..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image">Puede adjuntar una imagen del problema para ayudarnos a determinar lo que sucedió.</label>
+                    <input type="file" name="image" id="image" accept="image/*" class="form-control-file">
+                </div>
+                <div class="form-group">
+                    <label for="email">Ingrese un email donde podamos contactarnos: (Obligatorio)</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" id="legal" name="legal" class="form-check-input" required>
+                    <label for="legal" class="form-check-label">Afirmo no haber manipulado el software mediante terceros</label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="container-fluid text-center mt-5">
+    <p>&copy; 2024 Tech Hub Developers. Todos los derechos reservados.</p>
+    <div class="enlaces-contenedor">
+        <a href="https://www.facebook.com/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+        <a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='assets/js/validations.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Tech Hub Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="{{ url_for('home') }}">TECH HUB PROJECT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('shop') }}">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="container mt-5">
+    <div class="row">
+        <aside class="col-md-3 aside-filtros">
+            <h5>Filtros</h5>
+            <div class="text-aside">Filtrar por categoría:</div>
+            <ul>
+                <li>
+                    <label class="text-aside">
+                        <input type="checkbox" name="gaming"> Gaming
+                    </label>
+                </li>
+                <li>
+                    <label class="text-aside">
+                        <input type="checkbox" name="sonido"> Sonido
+                    </label>
+                </li>
+                <li>
+                    <label class="text-aside">
+                        <input type="checkbox" name="pc"> PC Hardware
+                    </label>
+                </li>
+            </ul>
+        </aside>
+        <div class="col-md-9">
+            <h2 class="titulo-productos">--- Catálogo de Productos ---</h2>
+            <div class="products-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="producto1" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE2LOGITECH.webp') }}" class="card-img-top h-100" alt="Producto 1">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">Mouse LOGITECH RGB</h5>
+                                <p class="card-text">$23.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto2" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/ergo-m575-gallery-black-1-new.png') }}" class="card-img-top h-100" alt="Producto 2">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto3" class="card product-card h-100 pc">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE3.webp') }}" class="card-img-top h-100" alt="Producto 3">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto4" class="card product-card h-100 pc">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE4.webp') }}" class="card-img-top h-100" alt="Producto 4">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto5" class="card product-card h-100 pc">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE5.webp') }}" class="card-img-top h-100" alt="Producto 5">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto6" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE6.webp') }}" class="card-img-top h-100" alt="Producto 6">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto7" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE8.jpg') }}" class="card-img-top h-100" alt="Producto 7">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto8" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/MOUSE9.jpg') }}" class="card-img-top h-100" alt="Producto 8">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">mouse LOGITECH G403 rgb</h5>
+                                <p class="card-text">$34.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto9" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/TECLADO3.jpg') }}" class="card-img-top h-100" alt="Producto 9">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">teclado LOGITECH RGB</h5>
+                                <p class="card-text">$50.499</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto10" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/TECLADO2.jpg') }}" class="card-img-top h-100" alt="Producto 10">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">teclado LOGITECH RGB</h5>
+                                <p class="card-text">$50.499</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto11" class="card product-card h-100 sonido">
+                            <img src="{{ url_for('static', filename='assets/img/URIS1.jpg') }}" class="card-img-top h-100" alt="Producto 11">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">AURICULARES</h5>
+                                <p class="card-text">$50.499</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto12" class="card product-card h-100 sonido">
+                            <img src="{{ url_for('static', filename='assets/img/PARLANTE1.jpg') }}" class="card-img-top h-100" alt="Producto 12">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">PARLANTES</h5>
+                                <p class="card-text">$50.499</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto13" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/JOYSTICK.jpg') }}" class="card-img-top h-100" alt="Producto 13">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">JOYSTICK NUEVO</h5>
+                                <p class="card-text">$50.499</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto14" class="card product-card h-100 pc">
+                            <img src="{{ url_for('static', filename='assets/img/prod1.jpg') }}" class="card-img-top h-100" alt="Producto 14">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">monitor</h5>
+                                <p class="card-text">$399.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto15" class="card product-card h-100 gaming">
+                            <img src="{{ url_for('static', filename='assets/img/prod2.png') }}" class="card-img-top h-100" alt="Producto 15">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">PC ARMADO </h5>
+                                <p class="card-text">$1.500.000</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="producto16" class="card product-card h-100 pc">
+                            <img src="{{ url_for('static', filename='assets/img/prod3.png') }}" class="card-img-top h-100" alt="Producto 16">
+                            <div class="card-body d-md-flex flex-wrap flex-md-column align-items-center justify-content-center">
+                                <h5 class="card-title">PC ARMADO + Monitor</h5>
+                                <p class="card-text">$1.999.999</p>
+                                <a href="#" class="btn btn-primary">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="container-fluid text-center mt-5">
+    <p>&copy; 2024 Tech Hub Developers. Todos los derechos reservados.</p>
+    <div class="enlaces-contenedor">
+        <a href="https://www.facebook.com/?locale=es_LA"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+        <a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+    </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content d-md-flex justify-content-center align-items-center">
+            <div class="modal-header">
+                <h5 class="modal-title modal-color" id="productModalLabel">Product Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="productModalImage" src="" class="img-fluid" alt="Product Image">
+                <p id="productModalPrice"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='assets/js/shop.js') }}"></script>
+</body>
+
+</html>
